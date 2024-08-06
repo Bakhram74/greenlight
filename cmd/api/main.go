@@ -19,7 +19,6 @@ import (
 )
 
 var (
-	buildTime string 
 	version string
 	)
 
@@ -81,7 +80,6 @@ func main() {
 	flag.Parse()
 	if *displayVersion {
 		fmt.Printf("Version:\t%s\n", version)
-		fmt.Printf("Build time:\t%s\n", buildTime)
 		os.Exit(0)
 	}
 	logger := jsonlog.New(os.Stdout, jsonlog.LevelInfo)
